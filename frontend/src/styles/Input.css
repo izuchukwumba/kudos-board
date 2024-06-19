@@ -1,0 +1,49 @@
+#Input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-input {
+  margin: 25px 0 20px;
+  width: 40%;
+  padding: 8px 10px;
+  border-radius: 7px;
+  border: 1px solid rgba(132, 71, 255, 0.5);
+  font-size: 1.05rem;
+  font-family: "DM Sans";
+  /* border: 1px solid #8447ff; */
+}
+#top-btn-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.top-btn {
+  border: 1px solid rgba(132, 71, 255, 0.5);
+  background-color: white;
+  padding: 5px 15px;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+.top-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: rgba(132, 71, 255, 0.2);
+}
+.button-create-card {
+  border: 1px solid white;
+  border-radius: 7px;
+  background-color: #8447ff;
+  color: white;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-family: "DM Sans";
+  transition: all 0.3s ease;
+}
+.button-create-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: rgb(88, 7, 249);
+}

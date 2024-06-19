@@ -1,0 +1,54 @@
+.Board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+}
+.board-image {
+  min-width: 30%;
+  min-height: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.board-texts-container {
+  margin-top: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 30%;
+  gap: 2px;
+}
+.board-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0);
+}
+.category {
+  font-weight: 300;
+}
+.board-btn-container {
+  display: flex;
+  gap: 15px;
+}
+.board-btn {
+  border-radius: 7px;
+  padding: 7px 10px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+.board-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.board-btn-view {
+  background-color: #8447ff;
+  color: white;
+}
+.board-btn-delete {
+  background-color: white;
+  border: 1px solid #8447ff;
+  color: #8447ff;
+}

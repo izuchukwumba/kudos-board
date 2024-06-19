@@ -1,0 +1,5 @@
+.BoardsContainer {
+  margin: 30px 15px;
+  display: flex;
+  flex-wrap: wrap;
+}

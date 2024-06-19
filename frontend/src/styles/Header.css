@@ -1,0 +1,15 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  /* border-bottom: 1.5px solid rgba(132, 71, 255, 0.5); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+#logo {
+  width: 5%;
+}
+#app-name {
+  font-family: "Ubuntu";
+  font-size: 1.8rem;
+}
