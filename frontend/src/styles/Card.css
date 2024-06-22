@@ -1,0 +1,93 @@
+.Card {
+  border: 1px solid rgba(132, 71, 255, 0.5);
+  display: flex;
+
+  gap: 10px;
+  border-radius: 7px;
+  width: 95%;
+}
+.card-image {
+  min-height: 50%;
+
+  min-width: 100px;
+  max-width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.card-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-title {
+  font-family: "Ubuntu";
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.card-author {
+  font-weight: 700;
+  font-family: "DM Sans";
+  font-size: 0.8rem;
+}
+.card-time {
+  font-weight: 300;
+}
+.card-description {
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+.card-btns {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+.add-view-comments {
+  color: white;
+  width: fit-content;
+  background-color: #8447ff;
+  padding: 5px 7px;
+}
+.delete-card {
+  /* margin-top: 10px; */
+  width: fit-content;
+  border: 1px solid #8447ff;
+  padding: 5px 7px;
+  color: #8447ff;
+}
+.card-details-modal-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: none;
+}
+.card-details-modal {
+  background-color: #8447ff;
+  color: #ffffe8;
+  padding: 30px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  border: 1px solid #ffffe8;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+.card-details-top {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}

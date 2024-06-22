@@ -1,5 +1,26 @@
+.button-create-card-container {
+  display: flex;
+  justify-content: center;
+}
+.button-create-card {
+  border: 1px solid white;
+  border-radius: 7px;
+  background-color: #8447ff;
+  color: white;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-family: "DM Sans";
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+.button-create-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: rgb(88, 7, 249);
+}
 .BoardsContainer {
   margin: 30px 15px;
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
