@@ -12,7 +12,7 @@ app.use(cors());
 
 //read boards
 app.get("/boards", async (req, res) => {
-  const allBoards = await prisma.Board.findMany({
+  const allBoards = await prisma.board.findMany({
     include: {
       cards: {
         include: { comments: true },
@@ -24,7 +24,7 @@ app.get("/boards", async (req, res) => {
 
 app.get("/boards/:id", async (req, res) => {
   const { id } = req.params;
-  const boardToGet = await prisma.Board.findUnique({
+  const boardToGet = await prisma.board.findUnique({
     where: {
       id: parseInt(id),
     },
@@ -40,7 +40,7 @@ app.get("/boards/:id", async (req, res) => {
 //create boards
 app.post("/boards/", async (req, res) => {
   const { image, title, category, author, cards } = req.body;
-  const boardToCreate = await prisma.Board.create({
+  const boardToCreate = await prisma.board.create({
     data: { image, title, category, author, cards },
   });
   res.status(201).json(boardToCreate);
@@ -50,7 +50,7 @@ app.put("/boards/:id", async (req, res) => {
   const { id } = req.params;
   const { image, title, category, cards } = req.body;
 
-  const boardToUpdate = await prisma.Board.update({
+  const boardToUpdate = await prisma.board.update({
     where: {
       id: parseInt(id),
     },
@@ -61,7 +61,7 @@ app.put("/boards/:id", async (req, res) => {
 //delete boards
 app.delete("/boards/:id", async (req, res) => {
   const { id } = req.params;
-  const boardToDelete = await prisma.Board.delete({
+  const boardToDelete = await prisma.board.delete({
     where: {
       id: parseInt(id),
     },
@@ -74,7 +74,7 @@ app.delete("/boards/:id", async (req, res) => {
 //read cards
 app.get("/boards/:boardId/cards", async (req, res) => {
   const { boardId } = req.params;
-  const cards = await prisma.Card.findMany({
+  const cards = await prisma.card.findMany({
     where: {
       boardId: parseInt(boardId),
     },
@@ -87,7 +87,7 @@ app.get("/boards/:boardId/cards", async (req, res) => {
 
 app.get("/boards/:boardId/cards/:cardId", async (req, res) => {
   const { boardId, cardId } = req.params;
-  const card = await prisma.Card.findUnique({
+  const card = await prisma.card.findUnique({
     where: {
       id: parseInt(cardId),
       boardId: parseInt(boardId),
@@ -103,7 +103,7 @@ app.get("/boards/:boardId/cards/:cardId", async (req, res) => {
 app.post("/boards/:boardId/cards", async (req, res) => {
   const boradId = req.params.boardId;
   const { image, title, description, author } = req.body;
-  const cardToCreate = await prisma.Card.create({
+  const cardToCreate = await prisma.card.create({
     data: {
       image,
       title,
@@ -171,7 +171,7 @@ app.get(
   "/boards/:boardId/cards/:cardId/comments/:commentId",
   async (req, res) => {
     const { cardId, commentId } = req.params;
-    const comment = await prisma.Comment.findUnique({
+    const comment = await prisma.comment.findUnique({
       where: {
         id: parseInt(commentId),
         cardId: parseInt(cardId),
