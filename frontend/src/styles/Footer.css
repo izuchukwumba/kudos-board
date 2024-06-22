@@ -1,0 +1,23 @@
+footer {
+  background-color: #8447ff;
+  color: white;
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  min-width: 100vw;
+  padding: 10px 0;
+  margin-left: -8px;
+}
+.footer-app-name {
+  font-family: "Ubuntu";
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.footer-copyright {
+  font-family: "Poppins";
+}

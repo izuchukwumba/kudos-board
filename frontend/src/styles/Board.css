@@ -1,25 +1,35 @@
 .Board {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: fit-content;
+  /* justify-content: center; */
+  align-items: center;
+  width: 250px;
+  border: 1px solid rgba(132, 71, 255, 0.5);
 }
 .board-image {
-  min-width: 30%;
+  max-width: 100%;
   min-height: 250px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .board-texts-container {
-  margin-top: 7px;
+  margin: 7px 0 0 10px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 30%;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 100%;
   gap: 2px;
+}
+.board-2nd-texts-container {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .board-title {
   font-size: 1.1rem;
@@ -28,14 +38,21 @@
 }
 .category {
   font-weight: 300;
+  width: 100%;
+}
+.board-author {
+  font-size: 0.7rem;
+  font-family: "DM Sans";
 }
 .board-btn-container {
   display: flex;
-  gap: 15px;
+  /* flex-direction: column; */
+  gap: 10px;
+  align-items: end;
 }
 .board-btn {
-  border-radius: 7px;
-  padding: 7px 10px;
+  width: fit-content;
+  /* padding: 7px 10px; */
   font-size: 0.8rem;
   transition: all 0.3s ease;
 }
@@ -46,9 +63,81 @@
 .board-btn-view {
   background-color: #8447ff;
   color: white;
+  font-size: 0.7rem;
+  padding: 4px;
 }
 .board-btn-delete {
-  background-color: white;
-  border: 1px solid #8447ff;
+  /* background-color: white;
+  border: 1px solid #8447ff; */
   color: #8447ff;
+  margin-right: 10px;
+  font-size: 1.3rem;
+  margin-bottom: -5px;
+}
+.delete-confirmation-modal-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: none;
+}
+.delete-confirmation-modal {
+  background-color: #8447ff;
+  color: #ffffe8;
+  padding: 30px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  border: 1px solid #ffffe8;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+.delete-confirmation-first-line {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: "Ubuntu";
+  margin-bottom: 10px;
+}
+.delete-confirmation-second-line {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "DM Sans";
+  margin-bottom: 10px;
+}
+.delete-confirmation-btns {
+  margin-top: 40px;
+  display: flex;
+  gap: 50px;
+}
+.delete-confirmation-btns div {
+  transition: all 0.3s ease;
+}
+.delete-confirmation-btns div:nth-child(1) {
+  border: 1px solid #ffffe8;
+  padding: 10px;
+  border-radius: 7px;
+  font-weight: 700;
+}
+.delete-confirmation-btns div:nth-child(2) {
+  background-color: #ffffe8;
+  color: #8447ff;
+  border: 1px solid #ffffe8;
+  border-radius: 7px;
+  padding: 10px;
+  font-weight: 700;
+}
+.delete-confirmation-btns div:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }

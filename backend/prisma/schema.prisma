@@ -11,7 +11,9 @@ model Board {
 id Int @id @default(autoincrement())
 title String
 image String
+author String
 category String
+createdAt DateTime @default(now())
 cards Card[]
 }
 
@@ -20,7 +22,19 @@ model Card{
   title String
   image String
   description String
-  author String
+  author String @default("")
+  upvotes Int @default(0)
+  createdAt DateTime @default(now())
+  comments Comment[]
   boardId Int
   board Board @relation(fields: [boardId], references: [id], onDelete: Cascade)
+}
+
+model Comment{
+  id Int @id @default(autoincrement())
+  author String
+  comment String
+  createdAt DateTime @default(now())
+  cardId Int
+  card Card @relation(fields: [cardId], references: [id], onDelete: Cascade)
 }

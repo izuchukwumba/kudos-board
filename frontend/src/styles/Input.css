@@ -47,3 +47,100 @@
   transform: scale(1.05);
   background-color: rgb(88, 7, 249);
 }
+
+.modal-create-board-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: rgba(0, 0, 0, 0.6);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: none;
+}
+.modal-create-board {
+  background-color: #8447ff;
+  color: #ffffe8;
+  padding: 30px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  border: 1px solid #ffffe8;
+  /* width: fit-content; */
+}
+.modal-create-board-header {
+  font-family: "Ubuntu";
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 7px 0 15px;
+}
+.close-modal-btn {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+  line-height: 0.9;
+  padding: 1px 4px 4px 4px;
+  background-color: #ffffe8;
+  transition: all 0.3s ease;
+}
+.close-modal-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+form {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center; */
+}
+label {
+  display: block;
+  padding-bottom: 15px;
+}
+label div {
+  font-family: "DM Sans";
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.modal-create-board input {
+  padding: 4% 5%;
+  width: 80%;
+  border: 1px solid rgba(132, 71, 255, 0.4);
+  border-radius: 7px;
+  width: 90%;
+}
+select {
+  appearance: none;
+  padding: 4% 5%;
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid grey;
+}
+.modal-btn-submit {
+  background-color: #8447ff;
+  border: 1px solid #ffffe8;
+  border-radius: 7px;
+  color: #ffffe8;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-size: 1.01rem;
+  margin-top: 20px;
+  padding: 10px;
+
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.modal-btn-submit:hover {
+  cursor: pointer;
+  background-color: #ffffe8;
+  color: #8447ff;
+}

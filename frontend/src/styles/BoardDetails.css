@@ -1,0 +1,18 @@
+.board-details-header {
+  font-family: "Ubuntu";
+}
+.all-cards-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.board-details-create {
+  /* border: 1px solid black; */
+  border-radius: 4px;
+  width: fit-content;
+  background-color: blueviolet;
+  color: white;
+  padding: 5px 10px;
+}
